@@ -30,6 +30,5 @@ export async function POST(request: Request) {
   });
   // console.log()
   await prisma.$disconnect();
-  console.log(1,user)
   return NextResponse.json({ user}, { status: 200 });
 };

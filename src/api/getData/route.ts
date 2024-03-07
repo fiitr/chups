@@ -27,7 +27,6 @@ export async function POST(request: Request) {
 //       EnrollmentNo: request.data.enr,
 //     },
 //   });
-console.log(request)
-//   await prisma.$disconnect();
+  await prisma.$disconnect();
   return NextResponse.json({ message: "Hello World" }, { status: 200 });
 };

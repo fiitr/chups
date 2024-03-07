@@ -8,7 +8,7 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  }
+}
   
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -24,17 +24,8 @@
   --gold-rgb: 246, 193, 119;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   color: rgb(var(--text-rgb));
-  /* background: rgb(var(--base-rgb)); */
 
   background-image: 
   radial-gradient(circle at center, rgba(255, 255, 255, 0.005) 0, rgba(255, 255, 255, 0.003) 1px, transparent 1px),
@@ -75,25 +66,25 @@ body {
   display: flex;
   align-items: center;
   padding: 20px;
-  }
-  
-  .box>i {
+  position: relative;
+  background-color: rgb(var(--surface-rgb));
+}
+
+.box>i {
   font-size: 20px;
   color: rgb(var(--rose-rgb));
-  }
-  
-  .searchbox {
+}
+
+.searchbox {
   flex: 1;
   height: 40px;
   border: none;
+  background-color: rgb(var(--surface-rgb));
   outline: none;
   font-size: 18px;
   padding-left: 10px;
-  }
-
-
-.box {
-  position: relative;
+  color: rgb(var(--gold-rgb)) !important;
+  
 }
 .grad {
   position: absolute;
@@ -103,9 +94,8 @@ body {
   transform: translate(0px, 6px); /* control the offsets */
   z-index: -1; /* place the element behind */
   filter: blur(0px); 
-  /* transition: filter 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
   background: radial-gradient(circle, rgba(215,130,126,1) 0%, rgba(252,70,107,0) 100%);  
-  transition: filter 1s ease-in-out;  
+  transition: filter 1.2s ease-in-out;  
 }
 
 .fillt{

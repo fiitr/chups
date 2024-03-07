@@ -14,8 +14,6 @@ const Field = ({ prop, value } : {prop: String, value: String|number}) => {
 };
 
 const DataCard = ({ data } : {data:_USER_DATA | undefined}) => {
-  console.log("HI", data);
-
   const data1 = {
     AadharCardNo: "",
     Awd: "",
@@ -97,7 +95,7 @@ const DataCard = ({ data } : {data:_USER_DATA | undefined}) => {
         {data?.Name}
       </span>
       <div className="   grid-container mt-8">
-        {isUndefined(data) || Object.keys(data).map((key, index) => {
+        {data==undefined || data==null || Object?.keys(data).map((key, index) => {
           if(key === "id" || key === "StSig") return null;
           return <Field key={index} prop={key} value={data[key as keyof _USER_DATA]} />;
         })}
