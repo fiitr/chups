@@ -5,21 +5,6 @@ import { NextResponse } from "next/server";
 
 const prisma = new PrismaClient();
 
-const basicAxios = async (
-  endpoint: string,
-  options?: AxiosRequestConfig
-) => {
-  const headers = options?.headers || {
-    "Content-Type": "application/json",
-  };
-  const res = await axios(endpoint, {
-    method: "GET",
-    headers: headers,
-    ...options,
-  });
-
-  return res;
-};
 
 export async function POST(request: Request) {
   const data = await request.json();
@@ -28,7 +13,6 @@ export async function POST(request: Request) {
       EnrollmentNo: data.enr,
     },
   });
-  // console.log()
   await prisma.$disconnect();
-  return NextResponse.json({ user}, { status: 200 });
+  return NextResponse.json({ message_for_devtool_users:"go touch grass",user}, { status: 200 });
 };

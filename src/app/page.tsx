@@ -49,15 +49,15 @@ export default function Home() {
   };
   return (
     <main
-      className="flex min-h-screen flex-col items-center gap-14 p-24"
+      className="flex min-h-screen flex-col justify-center items-center gap-14 p-24 w-screen"
       onClick={abc}
     >
-      <div className="flex-col items-center gap-10 flex">
+      <div className="flex-col items-center gap-10 flex master">
         <h1 className=" text-6xl font-extrabold noto-sans-bold  ">
           People
           <span className="gradient-text"> Search</span>
         </h1>
-        <div className="box ">
+        <div className="box w-screen p-8  sm:w-[30rem]">
           <div className="grad" id="gradient"></div>
           <i className="fa fa-search" aria-hidden="true"></i>{" "}
           <input

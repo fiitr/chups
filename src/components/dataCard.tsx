@@ -1,11 +1,11 @@
 import { isUndefined } from "util";
 import "./dataCard.css";
-import {_USER_DATA} from "@/types"
+import { _USER_DATA } from "@/types";
 
-const Field = ({ prop, value } : {prop: String, value: String|number}) => {
+const Field = ({ prop, value }: { prop: String; value: String | number }) => {
   return (
-    <div className="flex border-2 border-[color:rgb(var(--pine-rgb))] rounded-2xl grid-item">
-      <div className=" bg-[rgb(var(--pine-rgb))] p-3 pr-8 rounded-r-[45px] rounded-l-2xl min-w-80 text-black font-bold text-left">
+    <div className="flex border-2 border-[color:rgb(var(--pine-rgb))] rounded-2xl grid-item ">
+      <div className=" bg-[rgb(var(--pine-rgb))] p-3 pr-8 rounded-r-[45px] rounded-l-2xl  text-black font-bold text-left">
         {prop}
       </div>
       <div className=" p-3">{value}</div>
@@ -13,7 +13,7 @@ const Field = ({ prop, value } : {prop: String, value: String|number}) => {
   );
 };
 
-const DataCard = ({ data } : {data:_USER_DATA | undefined}) => {
+const DataCard = ({ data }: { data: _USER_DATA | undefined }) => {
   const data1 = {
     AadharCardNo: "",
     Awd: "",
@@ -90,17 +90,25 @@ const DataCard = ({ data } : {data:_USER_DATA | undefined}) => {
   };
 
   return (
-    <div className=" w-[60%] p-6  rounded-3xl">
-      <span className="text-4xl border-b-2 border-[color:rgb(var(--iris-rgb))] font-bold ">
-        {data?.Name}
-      </span>
-      <div className="   grid-container mt-8">
-        {data==undefined || data==null || Object?.keys(data).map((key, index) => {
-          if(key === "id" || key === "StSig") return null;
-          return <Field key={index} prop={key} value={data[key as keyof _USER_DATA]} />;
-        })}
+      <div className="w-screen md:w-[60%] p-6  rounded-3xl datacontainer">
+        <span className="text-4xl border-b-2 border-[color:rgb(var(--iris-rgb))] font-bold ">
+          {data?.Name}
+        </span>
+        <div className="   grid-container mt-8 ">
+          {data == undefined ||
+            data == null ||
+            Object?.keys(data).map((key, index) => {
+              if (key === "id" || key === "StSig") return null;
+              return (
+                <Field
+                  key={index}
+                  prop={key}
+                  value={data[key as keyof _USER_DATA]}
+                />
+              );
+            })}
+        </div>
       </div>
-    </div>
   );
 };
 

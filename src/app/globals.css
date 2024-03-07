@@ -23,10 +23,12 @@
   --pine-rgb: 156, 207, 216;
   --gold-rgb: 246, 193, 119;
 }
+.master{
+  transition: all 0.5s ease;
+}
 
 body {
   color: rgb(var(--text-rgb));
-
   background-image: 
   radial-gradient(circle at center, rgba(255, 255, 255, 0.005) 0, rgba(255, 255, 255, 0.003) 1px, transparent 1px),
   linear-gradient(to right, rgba(255, 255, 255, 0.029) 1px, transparent 1px),
@@ -59,13 +61,13 @@ body {
 
 
   .box {
-  width: 500px;
+  /* width: 500px; */
   height: 50px;
   background-color: white;
   border-radius: 30px;
   display: flex;
   align-items: center;
-  padding: 20px;
+  /* padding: 20px; */
   position: relative;
   background-color: rgb(var(--surface-rgb));
 }
