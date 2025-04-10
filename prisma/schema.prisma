@@ -1,0 +1,90 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id      Int      @id @default(autoincrement())
+
+  EnrollmentNo String @unique
+  Name          String
+  NameH       String?
+  EmailID     String?
+  IITREmailID String?
+  ProgramID String?
+  Mobileno String?
+  AadharCardNo String?
+  SemesterID String?
+  StructureID String?
+  DepartmentID String?
+  Fathersname String?
+  FatherMobileNo String?
+  FatherIncome String?
+  FatherOccupation String?
+  MotherName String?
+  MotherMobileNo String?
+  MotherIncome String?
+  MotherOccupation String?
+  Nationality String?
+  StateofDomicile String?
+  Religion String?
+  BelongstoMinority String?
+  NameofMinority String?
+  DateofBirth String?
+  MaritalStatus String?
+  Category String?
+  SubCategory String?
+  IsPrep String?
+  Gender String?
+  PersonwithDisability String?
+  DisabilityType String?
+  LocalGaurdian String?
+  LocalGaurdianPhone String?
+  LocalGaurdianAddress String?
+  PermanentAddress String?
+  State String?
+  City String?
+  Pincode String?
+  Pcountry String?
+  ContactNo String?
+  PEmailid String?
+  ExamQualified String?
+  Score_Rank String?
+  Categoryrank String?
+  ValidityUpto String?
+  FellowShip String?
+  StatusPHD String?
+  TitleofTheses String?
+  SuperviserDetail String?
+  Bhawan String?
+  RoomNo String?
+  BloodGroup String?
+  Remark String?
+  StStatus String?
+  StartSession String?
+  SemNo String?
+  StPic String?
+  Batch String?
+  SubBatch String?
+  StSig String?
+  Awd String?
+  P_Email String?
+  RegCode String?
+  ProgramAlphaCode String?
+  DepartmentAlphaCode String?
+  Expr1 String?
+  ProgramName String?
+  DepartmentName String?
+  Prgname String?
+  visits Int
+}
