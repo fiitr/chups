@@ -16,7 +16,7 @@ import {
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 export default function ChartsPage() {
-  const [data, setData] = useState<{ name: string; visits: number; StPic?: string }[]>([]);
+  const [data, setData] = useState<{ Name: string; visits: number; StPic?: string }[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
