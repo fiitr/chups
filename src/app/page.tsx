@@ -25,7 +25,7 @@ export default function Home() {
     grad?.classList.add("fillt");
   };
 
-  const searchEnr = async (e) => {
+  const searchEnr = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (enr.length === 0) {
