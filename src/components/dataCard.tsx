@@ -13,7 +13,7 @@ const Field = ({ prop, value }: { prop: String; value: String | number }) => {
   );
 };
 
-const DataCard = ({ data }: { data: _USER_DATA }) => {
+const DataCard = ({ data }: { data: _USER_DATA | undefined }) => {
   return (
     <>
     {
